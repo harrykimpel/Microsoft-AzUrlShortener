@@ -97,18 +97,18 @@ namespace Cloud5mins.ShortenerTools.Core.Domain
             }
         }
 
-        public static ShortUrlEntity GetEntity(string longUrl, string endUrl, string title, Schedule[] schedules, string qrCodeUrl)
-        {
-            return new ShortUrlEntity
-            {
-                PartitionKey = endUrl.First().ToString(),
-                RowKey = endUrl,
-                Url = longUrl,
-                QrCodeUrl = qrCodeUrl,
-                Title = title,
-                Schedules = schedules.ToList<Schedule>()
-            };
-        }
+        // public static ShortUrlEntity GetEntity(string longUrl, string endUrl, string title, Schedule[] schedules, string qrCodeUrl)
+        // {
+        //     return new ShortUrlEntity
+        //     {
+        //         PartitionKey = endUrl.First().ToString(),
+        //         RowKey = endUrl,
+        //         Url = longUrl,
+        //         QrCodeUrl = qrCodeUrl,
+        //         Title = title,
+        //         Schedules = schedules.ToList<Schedule>()
+        //     };
+        // }
 
         private string GetActiveUrl()
         {
